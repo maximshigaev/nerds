@@ -1,0 +1,160 @@
+.info {
+  min-height: 790px;
+}
+
+.info__leftContainer {
+  width: 660px;
+}
+
+.info__rightContainer {
+  width: 360px;
+
+  background-image: url('../img/nerds-illustration.jpg');
+}
+
+.info__intro {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.info__content {
+  color: $subBlackColor;
+}
+
+.info__title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.info__item {
+  color: $subBlackColor;
+}
+
+.info__value {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 10px;
+}
+
+.info__field {
+  line-height: 18px;
+}
+
+.info__clientsList {
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.info__clientsLink {
+  &:hover,
+  &:focus,
+  &:active {
+    position: relative;
+
+    & img {
+      visibility: hidden;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+
+      display: block;
+    }
+  }
+
+  &--acad {
+    width: 199px;
+    min-height: 68px;
+
+    &::before {
+      width: 199px;
+      height: 68px;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url('../img/logo-1-hover.png');
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url('../img/logo-1-active.png');
+      }
+    }
+  }
+
+  &--barb {
+    width: 209px;
+    min-height: 90px;
+
+    &::before {
+      width: 209px;
+      height: 90px;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url('../img/logo-2-hover.png');
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url('../img/logo-2-active.png');
+      }
+    }
+  }
+
+  &--pink {
+    width: 185px;
+    min-height: 52px;
+
+    &::before {
+      width: 185px;
+      height: 52px;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url('../img/logo-3-hover.png');
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url('../img/logo-3-active.png');
+      }
+    }
+  }
+
+  &--mishka {
+    width: 173px;
+    min-height: 84px;
+
+    &::before {
+      width: 173px;
+      height: 84px;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url('../img/logo-4-hover.png');
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url('../img/logo-4-active.png');
+      }
+    }
+  }
+}

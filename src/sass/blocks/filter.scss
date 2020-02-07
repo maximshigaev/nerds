@@ -1,0 +1,41 @@
+.filter {
+  width: 280px;
+  min-height: 835px;
+}
+
+.filter__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05px;
+}
+
+.filter__label {
+  line-height: 20px;
+  color: $subBlackColor;
+}
+
+.filter__rangeLabel {
+  color: $subBlackColor;
+  text-transform: uppercase;
+}
+
+.filter__button {
+  width: 260px;
+
+  color: black;
+
+  background-color: #eeeeee;
+
+  &:hover,
+  &:focus {
+    background-color: #dfdfdf;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    opacity: 0.3;
+  }
+}

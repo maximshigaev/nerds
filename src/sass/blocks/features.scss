@@ -1,0 +1,54 @@
+.features {
+  min-height: 430px;
+
+  background-color: #eeeeee;
+}
+
+.features__title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  font-family: $mainFont;
+}
+
+.features__button {
+  background-color: $redMainColor;
+
+  &:hover,
+  &:focus {
+    background-color: $redHoverColor;
+  }
+
+  &:active {
+    background-color: $redActiveColor;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    opacity: 0.3;
+  }
+}
+
+.features__container {
+  width: 380px;
+}
+
+.features__content {
+  color: $subBlackColor;
+}
+
+.features__item {
+  min-height: 430px;
+
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  &--long {
+    background-image: url('../img/slide1.png');
+  }
+
+  &--math {
+    background-image: url('../img/slide2.png');
+  }
+
+  &--night {
+    background-image: url('../img/slide3.png');
+  }
+}

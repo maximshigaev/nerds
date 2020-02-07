@@ -1,0 +1,13 @@
+.button {
+  display: inline-block;
+  width: 240px;
+  min-height: 50px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $mainFont;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}

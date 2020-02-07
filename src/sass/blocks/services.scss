@@ -1,0 +1,86 @@
+.services {
+  min-height: 507px;
+
+  border-bottom: 2px solid #eeeeee;
+}
+
+.services__item {
+  display: inline-block;
+  width: 300px;
+  min-height: 345px;
+
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  & .services__button {
+    width: 160px;
+  }
+
+  &--web {
+    background-image: url('../img/illustration-1.jpg');
+
+    & .services__button {
+      background-color: $redMainColor;
+
+      &:hover,
+      &:focus {
+        background-color: $redHoverColor;
+      }
+
+      &:active {
+        background-color: $redActiveColor;
+        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--app {
+    background-image: url('../img/illustration-2.jpg');
+
+    & .services__button {
+      background-color: #00ca74;
+
+      &:hover,
+      &:focus {
+        background-color: #00bc6c;
+      }
+
+      &:active {
+        background-color: #00aa62;
+        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--pres {
+    background-image: url('../img/illustration-3.jpg');
+
+    & .services__button {
+      background-color: #efc84a;
+
+      &:hover,
+      &:focus {
+        background-color: #eab534;
+      }
+
+      &:active {
+        background-color: #e5a722;
+        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.services__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services__content {
+  color: $subBlackColor;
+}

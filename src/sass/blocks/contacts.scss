@@ -1,0 +1,44 @@
+.contacts__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.contacts__info {
+  width: 319px;
+  min-height: 308px;
+
+  background-color: white;
+
+  & address {
+    font-style: normal;
+    line-height: 18px;
+    color: #666666;
+  }
+}
+
+.contacts__tel {
+  color: #666666;
+}
+
+.contacts__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contacts__button {
+  width: 219px;
+
+  background-color: $redMainColor;
+
+  &:hover,
+  &:focus {
+    background-color: $redHoverColor;
+  }
+
+  &:active {
+    background-color: $redActiveColor;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    opacity: 0.3;
+  }
+}

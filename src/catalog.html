@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
     <title>Nerds</title>
 </head>
-<body>
+<body class="catalogPage">
     <header class="mainHeader">
         <div class="wrapper">
             <nav class="mainHeader__nav">
@@ -23,23 +23,21 @@
                     <li class="mainHeader__item">
                         <a href="index.html#clients" title="Клиенты">Клиенты</a>
                     </li>
-                    <li class="mainHeader__item mainHeader__item--current">
-						<a title="Текущая страница">Магазин</a>
-					</li>
+                    <li class="mainHeader__item mainHeader__item--current">Магазин</li>
                     <li class="mainHeader__item">
                         <a href="#contacts" title="Контакты">Контакты</a>
                     </li>
                 </ul>
                 <ul class="mainHeader__userList">
                     <li class="mainHeader__userItem">
-                        <a title="Корзина">Корзина</a>
+                        <a href="" title="Корзина">Корзина</a >
                     </li>
                 </ul>
-            </nav>
+			</nav>
+			<h1 class="mainHeader__catalogTitle">Магазин готовых шаблонов</h1>
         </div>
     </header>
     <main class="catalogMain" >
-        <h1>Магазин готовых шаблонов</h1>
         <div class="wrapper">
             <section class="filter">
                 <h2 class="visuallyHidden">Фильтр шаблонов</h2>
@@ -117,9 +115,9 @@
             </section>
             <section class="catalog">
 				<h2 class="visuallyHidden">Каталог</h2>
-				<span class="catalog__SortTitle">Сортировать:</span>
+				<span class="catalog__sortTitle">Сортировать:</span>
 				<ul class="catalog__sortList">
-					<li class="catalog__sortItem">
+					<li class="catalog__sortItem catalog__sortItem--current">
 						<a>По цене</a>
 					</li>
 					<li class="catalog__sortItem">
@@ -141,7 +139,7 @@
                     <li class="catalog__item">
 						<div class="catalog__indicator"></div>
                         <img src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
-                        <div class="visuallyHidden catalog__info">
+                        <div class=" catalog__info">
                             <h3 class="catalog__title">Sedona</h3>
                             <span class="catalog__content">Информационный сайт для туристов</span>
                             <a class="button catalog__button">9900 руб.</a>
@@ -150,7 +148,7 @@
                     <li class="catalog__item">
 						<div class="catalog__indicator"></div>
                         <img src="img/img-pink.jpg" alt="Pink" width="360" height="576">
-                        <div class="visuallyHidden catalog__info">
+                        <div class="catalog__info">
                             <h3 class="catalog__title">Pink App</h3>
                             <p class="catalog__content">Продуктовый лендинг приложения для iOS и Android</p>
                             <a class="button catalog__button">9900 руб.</a>
@@ -159,7 +157,7 @@
                     <li class="catalog__item">
 						<div class="catalog__indicator"></div>
                         <img src="img/img-barbershop.jpg" alt="Borodinski" width="360" height="576">
-                        <div class="visuallyHidden catalog__info">
+                        <div class="catalog__info">
                             <h3 class="catalog__title">Barbershop</h3>
                             <p class="catalog__content">Сайт салона красоты. Для мужчин, да.</p>
                             <a class="button catalog__button">9900 руб.</a>
@@ -168,7 +166,7 @@
                     <li class="catalog__item">
 						<div class="catalog__indicator"></div>
                         <img src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
-                        <div class="visuallyHidden catalog__info">
+                        <div class="catalog__info">
                             <h3 class="catalog__title">Mishka</h3>
                             <p class="catalog__content">Интернет-магазин вязаных игрушек</p>
                             <a class="button catalog__button">9900 руб.</a>
@@ -177,7 +175,7 @@
                     <li class="catalog__item">
 						<div class="catalog__indicator"></div>
                         <img src="img/img-aplus.jpg" alt="A Plus" width="360" height="576">
-                        <div class="visuallyHidden catalog__info">
+                        <div class="catalog__info">
                             <h3 class="catalog__title">A Plus</h3>
                             <p class="catalog__content">Лендинг курсов повышения квалификации</p>
                             <a class="button catalog__button">9900 руб.</a>
@@ -186,7 +184,7 @@
                     <li class="catalog__item">
 						<div class="catalog__indicator"></div>
                         <img src="img/img-kvast.jpg" alt="Kvast" width="360" height="576">
-                        <div class="visuallyHidden catalog__info">
+                        <div class="catalog__info">
                             <h3 class="catalog__title">Кваст</h3>
                             <p class="catalog__content">Промо-сайт производителя крафтового кваса</p>
                             <a class="button catalog__button">9900 руб.</a>
@@ -194,17 +192,17 @@
                     </li>
                 </ul>
                 <ul class="catalog__paginationList">
-                    <li class="catalog__paginationItem catalog__paginationItem--current">
-						<a title="Текущая страница">1</a>
+                    <li class="catalog__paginationItem">
+						<a class="catalog__paginationLink catalog__paginationLink--current" title="Текущая страница">1</a>
 					</li>
                     <li class="catalog__paginationItem">
-                        <a title="2-я страница">2</a>
+                        <a class="catalog__paginationLink"  title="2-я страница">2</a>
                     </li>
                     <li class="catalog__paginationItem">
-                        <a title="3-я страница">3</a>
+                        <a class="catalog__paginationLink"  title="3-я страница">3</a>
                     </li>
                     <li class="catalog__paginationItem">
-                        <a class="button" title="Следующая страница">Следующая</a>
+                        <a class="button catalog__paginationButton" title="Следующая страница">Следующая</a>
                     </li>
                 </ul>
             </section>
@@ -213,7 +211,7 @@
 	<footer class="mainFooter">
 		<section class="contacts mainFooter__contacts" id="contacts">
 			<h2 class="visuallyHidden">Наши контакты</h2>
-			<img class="contacts__image" src="img/map.png" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+			<img class="contacts__image" src="img/new-map.png" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
 			<div class="wrapper">
 				<div class="contacts__info">
 					<p class="contacts__title">NЁRDS DESIGN STUDIO</p>
@@ -248,18 +246,17 @@
 			<p class="mainFooter__discount">Скидка 10% для друзей из социальных сетей.</p>
 		</div>
 	</footer>
-	<section class="modal">
+	<section class="hidden modal">
 		<h2 class="modal__title">Напишите нам</h2>
-		<button class="modal__closeButton" type="reset">X</button>
+		<button class="modal__closeButton" type="reset"></button>
 		<form class="modal__form" action="https://echo.htmlacademy.ru" method="POST" name="modal">
 			<label class="modal__label" for="name">Ваше имя:</label>
 			<input type="text" name="userName" id="name" placeholder="Имя Фамилия" minlength="5" maxlength="25"
-				required
 			>
 			<label class="modal__label" for="email">Ваше e-mail:</label>
-				<input type="email" name="email" id="email" placeholder="email@example.com" required>
+				<input type="email" name="email" id="email" placeholder="email@example.com" >
 			<label class="modal__label" for="message">Текст письма:</label>
-				<textarea class="modal__textArea" name="message" id="message" placeholder="В свободной форме" required>		
+				<textarea class="modal__textArea" name="message" id="message" placeholder="В свободной форме" required>
 				</textarea>
 			<button class="button modal__button">Отправить</button>
 		</form>

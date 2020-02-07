@@ -16,8 +16,6 @@ module.exports = {
 		overlay: true
 	},
 
-	// watch: true,
-
 	devtool: 'cheap-module-eval-source-map',
 
 	module: {
@@ -56,7 +54,6 @@ module.exports = {
 				use: {
 					loader: 'url-loader',
 					options: {
-						limit: 1000,
 						name: '[name].[ext]',
 						outputPath: 'img/'
 					}

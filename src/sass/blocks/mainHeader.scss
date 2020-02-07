@@ -1,0 +1,96 @@
+.mainHeader {
+  min-height: 115px;
+
+  background-color: #eeeeee;
+}
+
+.catalogPage .mainHeader {
+  min-height: 355;
+}
+
+.mainHeader__catalogTitle {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.mainHeader__item {
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  &--current {
+    border-bottom: 2px solid $redMainColor;
+  }
+}
+
+.catalogPage .mainHeader__logo {
+  &:hover,
+  &:focus,
+  &:active {
+    position: relative;
+
+    & .mainHeader__logoImage {
+      visibility: hidden;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+
+      display: block;
+      width: 160px;
+      height: 65px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-image: url('../img/nerds-logo-hover.svg');
+    }
+  }
+
+  &:active {
+    &::before {
+      background-image: url('../img/nerds-logo-active.svg');
+    }
+  }
+}
+
+.mainHeader__item a {
+  &:hover,
+  &:focus {
+    color: $redMainColor;
+  }
+
+  &:active {
+    color: black;
+
+    opacity: 0.3;
+  }
+}
+
+.mainHeader__userItem {
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.mainHeader__userItem a {
+  &:hover,
+  &:focus {
+    color: $redMainColor;
+  }
+
+  &:active {
+    color: black;
+
+    opacity: 0.3;
+  }
+}

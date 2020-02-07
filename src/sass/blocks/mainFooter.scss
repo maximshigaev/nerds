@@ -1,0 +1,74 @@
+.mainFooter__item {
+  & a {
+    position: relative;
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-color: $redHoverColor;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: $redActiveColor;
+        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      width: 79px;
+      height: 79px;
+
+      background-color: #e1e1e1;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+    }
+  }
+
+  &--vk {
+    & a {
+      &:active {
+        &::before {
+          background-image: url('../img/vk-active.svg');
+        }
+      }
+
+      &::before {
+        background-image: url('../img/vk-icon.svg');
+      }
+    }
+  }
+
+  &--fb {
+    & a {
+      &:active {
+        &::before {
+          background-image: url('../img/fb-active.svg');
+        }
+      }
+
+      &::before {
+        background-image: url('../img/fb-icon.svg');
+      }
+    }
+  }
+
+  &--in {
+    & a {
+      &:active {
+        &::before {
+          background-image: url('../img/insta-active.svg');
+        }
+      }
+
+      &::before {
+        background-image: url('../img/insta-icon.svg');
+      }
+    }
+  }
+}

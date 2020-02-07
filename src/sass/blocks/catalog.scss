@@ -1,0 +1,126 @@
+.catalog {
+  width: 760px;
+  min-height: 2215px;
+}
+
+.catalog__sortTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.catalog__sortItem {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.catalog__item {
+  display: inline-block;
+
+  &:hover {
+    position: relative;
+
+    & .catalog__info {
+      visibility: visible;
+    }
+
+    & .catalog__indicator {
+      background-image: url('../img/browser.svg');
+    }
+  }
+}
+
+.catalog__indicator {
+  width: 360px;
+  height: 40px;
+
+  background-color: #eaeaea;
+}
+
+.catalog__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 360px;
+  height: 231px;
+
+  background-color: #eeeeee;
+  visibility: hidden;
+}
+
+.catalog__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog__content {
+  line-height: 18px;
+  color: #666666;
+}
+
+.catalog__button {
+  width: 200px;
+
+  background-color: $redMainColor;
+
+  &:hover,
+  &:focus {
+    background-color: $redHoverColor;
+  }
+
+  &:active {
+    background-color: $redActiveColor;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  }
+}
+
+.catalog__paginationLink {
+  display: block;
+  width: 50px;
+  height: 50px;
+
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+
+  background-color: #eeeeee;
+
+  &:hover,
+  &:focus {
+    background-color: #dfdfdf;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    opacity: 0.3;
+  }
+
+  &--current {
+    background-color: white;
+    border: 3px solid #dbdbdb;
+  }
+}
+
+.catalog__paginationButton {
+  width: 260px;
+
+  color: black;
+
+  background-color: #eeeeee;
+
+  &:hover,
+  &:focus {
+    background-color: #dfdfdf;
+  }
+
+  &:active {
+    background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    opacity: 0.3;
+  }
+}
