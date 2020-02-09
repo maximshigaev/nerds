@@ -1,57 +1,148 @@
 .info {
-  min-height: 790px;
+  min-height: 789px;
+  padding-top: 40px;
+
+  & .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
-.info__leftContainer {
-  width: 660px;
+.info__content {
+  flex-basis: calc((100% + 40px) / 12 * 7 - 40px);
+  margin-top: 33px;
 }
 
-.info__rightContainer {
-  width: 360px;
+.info__table {
+  position: relative;
 
-  background-image: url('../img/nerds-illustration.jpg');
+  flex-basis: calc((100% + 40px) / 12 * 4 - 40px);
+  min-height: 135px;
+
+  & thead {
+    display: block;
+    margin-top: 42px;
+    margin-bottom: 32px;
+
+    & tr {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  & tbody {
+    display: block;
+  }
+
+  & sup {
+    font-size: 28px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 360px;
+    height: 208px;
+
+    background-image: url('../img/nerds-illustration.jpg');
+  }
 }
 
 .info__intro {
+  margin-bottom: 34px;
+
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
 }
 
-.info__content {
+.info__text {
+  margin-bottom: 39px;
+
   color: $subBlackColor;
+}
+
+.info__list {
+  padding-left: 35px;
 }
 
 .info__title {
+  margin-top: 242px;
+
   font-weight: 700;
   text-transform: uppercase;
+
+  &--normal {
+    margin-top: 0;
+    margin-bottom: 23px;
+  }
 }
 
 .info__item {
+  position: relative;
+
+  margin-bottom: 24px;
+
   color: $subBlackColor;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -34px;
+
+    display: block;
+    width: 25px;
+    height: 2px;
+
+    background-color: $redMainColor;
+  }
 }
 
 .info__value {
+  width: 100px;
+
   font-weight: 700;
   font-size: 45px;
   line-height: 10px;
 }
 
 .info__field {
+  width: calc(100% / 3);
+
   line-height: 18px;
 }
 
 .info__clientsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 185px;
+  margin-top: 48px;
+
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
 }
 
+.info__clientsItem {
+  width: 260px;
+
+  text-align: center;
+}
+
 .info__clientsLink {
+  position: relative;
+
   &:hover,
   &:focus,
   &:active {
-    position: relative;
-
     & img {
       visibility: hidden;
     }

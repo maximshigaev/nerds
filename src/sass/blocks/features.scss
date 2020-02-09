@@ -1,10 +1,13 @@
 .features {
-  min-height: 430px;
+  min-height: 425px;
+  padding-top: 10px;
 
   background-color: #eeeeee;
 }
 
 .features__title {
+  margin-bottom: 27px;
+
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
@@ -27,18 +30,21 @@
 }
 
 .features__container {
-  width: 380px;
+  width: calc((100% + 40px) / 12 * 4 - 20px);
 }
 
 .features__content {
+  margin-bottom: 38px;
+
   color: $subBlackColor;
 }
 
 .features__item {
-  min-height: 430px;
+  min-height: 413px;
+  padding-top: 58px;
 
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: calc(100% - 30px) bottom;
 
   &--long {
     background-image: url('../img/slide1.png');

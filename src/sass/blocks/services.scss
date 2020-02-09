@@ -1,19 +1,27 @@
 .services {
-  min-height: 507px;
+  min-height: 509px;
+  padding-top: 80px;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
 
   border-bottom: 2px solid #eeeeee;
 }
 
 .services__item {
-  display: inline-block;
-  width: 300px;
+  flex-basis: 300px;
   min-height: 345px;
+  margin-right: 100px;
+  padding-top: 170px;
 
   background-repeat: no-repeat;
   background-position: top left;
 
-  & .services__button {
-    width: 160px;
+  &:nth-child(3) {
+    margin-right: 0;
   }
 
   &--web {
@@ -74,7 +82,13 @@
   }
 }
 
+.services__button {
+  width: 160px;
+}
+
 .services__title {
+  margin-bottom: 15px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -82,5 +96,8 @@
 }
 
 .services__content {
+  width: calc(100% - 40px);
+  margin-bottom: 32px;
+
   color: $subBlackColor;
 }

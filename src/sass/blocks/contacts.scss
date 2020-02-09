@@ -1,11 +1,23 @@
+.contacts {
+  position: relative;
+
+  min-height: 416px;
+}
+
 .contacts__image {
   display: block;
   margin: 0 auto;
 }
 
 .contacts__info {
+  position: absolute;
+  top: 54px;
+  left: 142px;
+
   width: 319px;
   min-height: 308px;
+  padding: 50px;
+  padding-top: 49px;
 
   background-color: white;
 
@@ -20,7 +32,13 @@
   color: #666666;
 }
 
+.contacts__address {
+  margin-bottom: 17px;
+}
+
 .contacts__title {
+  margin-bottom: 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -28,6 +46,7 @@
 
 .contacts__button {
   width: 219px;
+  margin-top: 37px;
 
   background-color: $redMainColor;
 

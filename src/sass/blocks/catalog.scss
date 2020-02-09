@@ -33,7 +33,7 @@
 
 .catalog__indicator {
   width: 360px;
-  height: 40px;
+  min-height: 40px;
 
   background-color: #eaeaea;
 }
@@ -44,7 +44,7 @@
   left: 0;
 
   width: 360px;
-  height: 231px;
+  min-height: 231px;
 
   background-color: #eeeeee;
   visibility: hidden;

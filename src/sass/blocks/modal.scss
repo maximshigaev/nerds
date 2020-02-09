@@ -13,7 +13,7 @@
   & input,
   & .modal__textArea {
     width: 360px;
-    height: 50px;
+    min-height: 50px;
 
     font: inherit;
     line-height: 18px;

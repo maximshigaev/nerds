@@ -45,7 +45,7 @@
                     <li class="features__item features__item--long features__item--current">
 						<div class="features__container">
 							<h3 class="features__title">Долго, дорого, скрупулезно.</h3>
-							<p class="features__content">Математически выверенный дизайн
+							<p class="features__content">Математически выверенный дизайн<br>
 								для вашего сайта или мобильного приложения.
 							</p>
 							<a class="button features__button" href="" title="Узнать больше">Узнать больше</a>
@@ -70,7 +70,7 @@
 						</div>
                     </li>
                 </ul>
-                <ul class="features__toggleList">
+                <ul class="hidden features__toggleList">
                     <li class="features__toggleItem features__toggleItem--current">
                         <button class="features__toggleButton" type="button"></button>
                     </li>
@@ -108,36 +108,34 @@
         <section class="info">
 			<h2 class="visuallyHidden">Информация о студии</h2>
             <div class="wrapper">
-                <div class="info__leftContainer">
-                    <p class="info__intro">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-                    <p class="info__content">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+                <div class="info__content">
+                    <p class="info__intro">Мы &ndash; маленькая, но гордая дизайн-студия из Краснодара.</p>
+                    <p class="info__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
                         превыше креатива. Работаем не покладая рук, как роботы.</p>
-                    <p class="info__title">Выполняем заказы на разработку:</p>
+                    <p class="info__title info__title--normal">Выполняем заказы на разработку:</p>
                     <ul class="info__list">
                         <li class="info__item">Веб-сайтов любой сложности</li>
                         <li class="info__item">Мобильных приложений для iOS и Android</li>
                         <li class="info__item">Слайдшоу и видео для корпоративных презентаций</li>
                     </ul>
                 </div>
-                <div class="info__rightContainer">
-                    <table class="info__table">
-						<caption class="info__title">С 2004 года любим точность во всем:</caption>
-                        <thead>
-                            <tr>
-                                <th class="info__value">146<sup>%</sup></th>
-                                <th class="info__value">100<sup>%</sup></th>
-                                <th class="info__value">50<sup>%</sup></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="info__field">Уровень самоотдачи</td>
-                                <td class="info__field">Соблюдение сроков</td>
-                                <td class="info__field">Минимальная предоплата</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+				<table class="info__table">
+					<caption class="info__title">С 2004 года любим точность во всем:</caption>
+					<thead>
+						<tr>
+							<th class="info__value">146<sup>%</sup></th>
+							<th class="info__value">100<sup>%</sup></th>
+							<th class="info__value">50<sup>%</sup></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="info__field">Уровень самоотдачи</td>
+							<td class="info__field">Соблюдение сроков</td>
+							<td class="info__field">Минимальная предоплата</td>
+						</tr>
+					</tbody>
+				</table>
                 <ul class="info__clientsList" id="clients">
                     <li class="info__clientsItem ">
 						<a class="info__clientsLink info__clientsLink--acad" href="" title="Html Academy">
@@ -175,11 +173,11 @@
                 <div class="contacts__info">
                     <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
                     <address>
-						<p class="contacts__address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+						<p class="contacts__address">191186, Санкт-Петербург, <br> ул. Б. Конюшенная, д. 19/8</p>
 						тел:
-                        <a class="contacts__tel" href="tel:+79123456789" title="Наш телефон">+7(812)275-75-75</a>
+                        <a class="contacts__tel" href="tel:+79123456789" title="Наш телефон">+7 (812) 275-75-75</a>
                     </address>
-                    <a class="button contacts__button" title="Написать">Напишите нам</a>
+                    <a  href="" class="button contacts__button" title="Написать">Напишите нам</a>
                 </div>
             </div>
         </section>
@@ -200,12 +198,14 @@
                         <span class="visuallyHidden">Инстаграм</span>
                     </a>
                 </li>
-            </ul>
-            <p class="mainFooter__slogan">Давайте дружить, это выгодно!</p>
-            <p class="mainFooter__discount">Скидка 10% для друзей из социальных сетей.</p>
+			</ul>
+			<div class="mainFooter__container">
+				<p class="mainFooter__slogan">Давайте дружить, это выгодно!</p>
+				<p class="mainFooter__discount">Скидка 10% для друзей из социальных сетей.</p>
+			</div>
         </div>
     </footer>
-	<section class="hidden modal">
+	<section class="modal">
 		<h2 class="modal__title">Напишите нам</h2>
 		<button class="modal__closeButton" type="reset"></button>
 		<form class="modal__form" action="https://echo.htmlacademy.ru" method="POST" name="modal">

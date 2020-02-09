@@ -1,11 +1,75 @@
 .mainHeader {
-  min-height: 115px;
+  min-height: 120px;
+  padding-top: 49px;
 
   background-color: #eeeeee;
 }
 
 .catalogPage .mainHeader {
-  min-height: 355;
+  min-height: 355px;
+
+  &__nav {
+    margin-bottom: 70px;
+  }
+
+  &__logo {
+    &:hover,
+    &:focus,
+    &:active {
+      position: relative;
+
+      & .mainHeader__logoImage {
+        visibility: hidden;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+
+        display: block;
+        width: 160px;
+        height: 65px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url('../img/nerds-logo-hover.svg');
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url('../img/nerds-logo-active.svg');
+      }
+    }
+  }
+}
+
+.mainHeader__logo {
+  flex-shrink: 0;
+  margin-right: 200px;
+}
+
+.mainHeader__nav {
+  display: flex;
+}
+
+.mainHeader__list {
+  display: flex;
+  flex-basis: calc((100% + 40px) / 12 * 4 + 40px);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 35px;
+  margin-top: 26px;
+}
+
+.mainHeader__userList {
+  margin-top: 28px;
+  margin-left: auto;
 }
 
 .mainHeader__catalogTitle {
@@ -22,42 +86,6 @@
 
   &--current {
     border-bottom: 2px solid $redMainColor;
-  }
-}
-
-.catalogPage .mainHeader__logo {
-  &:hover,
-  &:focus,
-  &:active {
-    position: relative;
-
-    & .mainHeader__logoImage {
-      visibility: hidden;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 4px;
-      left: 0;
-
-      display: block;
-      width: 160px;
-      height: 65px;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    &::before {
-      background-image: url('../img/nerds-logo-hover.svg');
-    }
-  }
-
-  &:active {
-    &::before {
-      background-image: url('../img/nerds-logo-active.svg');
-    }
   }
 }
 

@@ -1,4 +1,20 @@
+.mainFooter {
+  & .wrapper {
+    display: flex;
+    margin-bottom: 70px;
+  }
+}
+
 .mainFooter__item {
+  display: inline-block;
+  width: 79px;
+  height: 79px;
+  margin-right: 11px;
+
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+
   & a {
     position: relative;
 
@@ -71,4 +87,21 @@
       }
     }
   }
+}
+
+.mainFooter__list {
+  flex-basis: 260px;
+  height: 79px;
+  margin-right: 140px;
+
+  font-size: 0;
+}
+
+.mainFooter__slogan {
+  margin-top: 6px;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
 }
