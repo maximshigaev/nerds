@@ -252,16 +252,24 @@
 		<h2 class="modal__title">Напишите нам</h2>
 		<button class="modal__closeButton" type="reset"></button>
 		<form class="modal__form" action="https://echo.htmlacademy.ru" method="POST" name="modal">
-			<label class="modal__label" for="name">Ваше имя:</label>
-			<input type="text" name="userName" id="name" placeholder="Имя Фамилия" minlength="5" maxlength="25"
-			>
-			<label class="modal__label" for="email">Ваше e-mail:</label>
-				<input type="email" name="email" id="email" placeholder="email@example.com" >
-			<label class="modal__label" for="message">Текст письма:</label>
-				<textarea class="modal__textArea" name="message" id="message" placeholder="В свободной форме" required>
-				</textarea>
+			<div class="modal__leftContainer">
+				<label class="modal__label" for="name">Ваше имя:</label>
+				<input type="text" name="userName" id="name" placeholder="Имя Фамилия" minlength="5" maxlength="25"
+					required
+				>
+			</div>
+			<div class="modal__rightContainer">
+				<label class="modal__label" for="email">Ваше e-mail:</label>
+				<input type="email" name="email" id="email" placeholder="email@example.com" required>
+			</div>
+			<div class="modal__bottomContainer">
+				<label class="modal__label" for="message">Текст письма:</label>
+				<textarea class="modal__textArea" name="message" id="message"
+					placeholder="В свободной форме" required></textarea>
+			</div>
 			<button class="button modal__button">Отправить</button>
 		</form>
 	</section>
+	<div class="overlay hidden"></div>
 </body>
 </html>

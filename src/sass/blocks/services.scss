@@ -6,6 +6,7 @@
 .services__list {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -40px;
   padding-bottom: 80px;
 
   border-bottom: 2px solid #eeeeee;
@@ -19,10 +20,6 @@
 
   background-repeat: no-repeat;
   background-position: top left;
-
-  &:nth-child(3) {
-    margin-right: 0;
-  }
 
   &--web {
     background-image: url('../img/illustration-1.jpg');

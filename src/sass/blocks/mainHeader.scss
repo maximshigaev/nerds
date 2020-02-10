@@ -23,14 +23,13 @@
       }
 
       &::before {
-        content: '';
-        position: absolute;
         bottom: 7px;
         left: 0;
 
-        display: block;
         width: 160px;
         height: 65px;
+
+        @include pseudoElement();
       }
     }
 
@@ -103,11 +102,23 @@
 }
 
 .mainHeader__userItem {
+  position: relative;
+
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
 
-  cursor: pointer;
+  &::before {
+    top: 6px;
+    left: -40px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url('../img/cart-icon.svg');
+
+    @include pseudoElement();
+  }
 }
 
 .mainHeader__userItem a {

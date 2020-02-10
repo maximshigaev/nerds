@@ -1,8 +1,15 @@
 .features {
-  min-height: 425px;
-  padding-top: 10px;
+  min-height: 430px;
 
   background-color: #eeeeee;
+
+  & .wrapper {
+    position: relative;
+  }
+}
+
+.features__list {
+  margin-top: -7px;
 }
 
 .features__title {
@@ -40,8 +47,8 @@
 }
 
 .features__item {
-  min-height: 413px;
-  padding-top: 58px;
+  min-height: 430px;
+  padding-top: 80px;
 
   background-repeat: no-repeat;
   background-position: calc(100% - 30px) bottom;
@@ -52,9 +59,84 @@
 
   &--math {
     background-image: url('../img/slide2.png');
+
+    & .features__container {
+      width: calc((100% + 40px) / 12 * 6 - 40px);
+    }
+
+    & .features__content {
+      width: 75%;
+    }
   }
 
   &--night {
     background-image: url('../img/slide3.png');
+
+    & .features__container {
+      width: calc((100% + 40px) / 12 * 4 + 20px);
+    }
+
+    & .features__content {
+      width: 82%;
+    }
+  }
+}
+
+.features__toggleList {
+  position: absolute;
+  top: 317px;
+  left: calc(50% - 44px);
+
+  display: block;
+  width: 88px;
+  height: 18px;
+
+  font-size: 0;
+}
+
+.features__toggleItem {
+  display: inline-block;
+  height: 18px;
+  margin-right: 17px;
+
+  vertical-align: baseline;
+
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+
+  &--current {
+    & .features__toggleButton {
+      position: relative;
+
+      &::before {
+        top: 5px;
+        left: 5px;
+
+        width: 8px;
+        height: 8px;
+
+        border: 2px solid #c2c2c2;
+        border-radius: 50%;
+
+        @include pseudoElement();
+      }
+    }
+  }
+}
+
+.features__toggleButton {
+  width: 18px;
+  height: 18px;
+
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: 0 0 0 1px black;
   }
 }

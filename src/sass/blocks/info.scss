@@ -40,16 +40,15 @@
   }
 
   &::before {
-    content: '';
-    position: absolute;
     top: 0;
     right: 0;
 
-    display: block;
     width: 360px;
     height: 208px;
 
     background-image: url('../img/nerds-illustration.jpg');
+
+    @include pseudoElement();
   }
 }
 
@@ -91,25 +90,25 @@
   color: $subBlackColor;
 
   &::before {
-    content: '';
-    position: absolute;
     top: 10px;
     left: -34px;
 
-    display: block;
     width: 25px;
     height: 2px;
 
     background-color: $redMainColor;
+
+    @include pseudoElement();
   }
 }
 
 .info__value {
-  width: 100px;
+  width: 119px;
 
   font-weight: 700;
   font-size: 45px;
   line-height: 10px;
+  text-align: left;
 }
 
 .info__field {
@@ -140,6 +139,15 @@
 .info__clientsLink {
   position: relative;
 
+  &::after {
+    width: 2px;
+    height: 52px;
+
+    background-color: #eeeeee;
+
+    @include pseudoElement();
+  }
+
   &:hover,
   &:focus,
   &:active {
@@ -148,12 +156,10 @@
     }
 
     &::before {
-      content: '';
-      position: absolute;
       bottom: 4px;
       left: 0;
 
-      display: block;
+      @include pseudoElement();
     }
   }
 
@@ -164,6 +170,11 @@
     &::before {
       width: 199px;
       height: 68px;
+    }
+
+    &::after {
+      right: -52px;
+      bottom: 10px;
     }
 
     &:hover,
@@ -183,6 +194,11 @@
   &--barb {
     width: 209px;
     min-height: 90px;
+
+    &::after {
+      right: -46px;
+      bottom: 20px;
+    }
 
     &::before {
       width: 209px;
@@ -207,6 +223,11 @@
     width: 185px;
     min-height: 52px;
 
+    &::after {
+      right: -58px;
+      bottom: 0;
+    }
+
     &::before {
       width: 185px;
       height: 52px;
@@ -229,6 +250,10 @@
   &--mishka {
     width: 173px;
     min-height: 84px;
+
+    &::after {
+      display: none;
+    }
 
     &::before {
       width: 173px;

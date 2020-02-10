@@ -11,6 +11,8 @@
   height: 79px;
   margin-right: 11px;
 
+  vertical-align: middle;
+
   &:nth-child(3) {
     margin-right: 0;
   }
@@ -33,9 +35,6 @@
     }
 
     &::before {
-      content: '';
-      position: absolute;
-
       width: 79px;
       height: 79px;
 
@@ -43,6 +42,8 @@
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;
+
+      @include pseudoElement();
     }
   }
 

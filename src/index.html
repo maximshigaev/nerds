@@ -48,10 +48,10 @@
 							<p class="features__content">Математически выверенный дизайн<br>
 								для вашего сайта или мобильного приложения.
 							</p>
-							<a class="button features__button" href="" title="Узнать больше">Узнать больше</a>
+							<a class="button features__button" href="#" title="Узнать больше">Узнать больше</a>
 						</div>
                     </li>
-                    <li class="features__item features__item--math hidden">
+                    <li class="hidden features__item features__item--math">
 						<div class="features__container">
 							<h3 class="features__title">Любим математику как никто другой</h3>
 							<p class="features__content">Никакого креатива, только математические формулы
@@ -60,7 +60,7 @@
 							<a class="button features__button" title="Узнать больше">Узнать больше</a>
 						</div>
                     </li>
-                    <li class="features__item features__item--night hidden">
+                    <li class="hidden features__item features__item--night">
 						<div class="features__container">
 							<h3 class="features__title">Только ночь, только хардкор</h3>
 							<p class="features__content">Работать днем, как все? Мы против этого.
@@ -70,7 +70,7 @@
 						</div>
                     </li>
                 </ul>
-                <ul class="hidden features__toggleList">
+                <ul class="features__toggleList">
                     <li class="features__toggleItem features__toggleItem--current">
                         <button class="features__toggleButton" type="button"></button>
                     </li>
@@ -90,17 +90,17 @@
                     <li class="services__item services__item--web">
                         <h3 class="services__title">Веб-сайты</h3>
                         <p class="services__content">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                        <a  href="" class="button services__button" title="Заказать">Заказать</a>
+                        <a  href="#" class="button services__button" title="Заказать">Заказать</a>
                     </li>
                     <li class="services__item services__item--app">
                         <h3 class="services__title">Приложения</h3>
                         <p class="services__content">Покорите топ-10 приложений в AppStore и Google Play</p>
-                        <a href="" class="button services__button" title="Заказать">Заказать</a>
+                        <a href="#" class="button services__button" title="Заказать">Заказать</a>
                     </li>
                     <li class="services__item services__item--pres">
                         <h3 class="services__title">Презентации</h3>
                         <p class="services__content">Вы даже не подозреваете, насколько вы изумительны!</p>
-                        <a href="" class="button services__button" title="Заказать">Заказать</a>
+                        <a href="#" class="button services__button" title="Заказать">Заказать</a>
                     </li>
                 </ul>
             </div>
@@ -205,19 +205,28 @@
 			</div>
         </div>
     </footer>
-	<section class="modal">
+	<section class="hidden modal">
 		<h2 class="modal__title">Напишите нам</h2>
 		<button class="modal__closeButton" type="reset"></button>
 		<form class="modal__form" action="https://echo.htmlacademy.ru" method="POST" name="modal">
-			<label class="modal__label" for="name">Ваше имя:</label>
-			<input type="text" name="userName" id="name" placeholder="Имя Фамилия" minlength="5" maxlength="25">
-			<label class="modal__label" for="email">Ваше e-mail:</label>
-			<input type="email" name="email" id="email" placeholder="email@example.com">
-			<label class="modal__label" for="message">Текст письма:</label>
-			<textarea class="modal__textArea" name="message" id="message" placeholder="В свободной форме" required>
-					</textarea>
+			<div class="modal__leftContainer">
+				<label class="modal__label" for="name">Ваше имя:</label>
+				<input type="text" name="userName" id="name" placeholder="Имя Фамилия" minlength="5" maxlength="25"
+					required
+				>
+			</div>
+			<div class="modal__rightContainer">
+				<label class="modal__label" for="email">Ваше e-mail:</label>
+				<input type="email" name="email" id="email" placeholder="email@example.com" required>
+			</div>
+			<div class="modal__bottomContainer">
+				<label class="modal__label" for="message">Текст письма:</label>
+				<textarea class="modal__textArea" name="message" id="message"
+					placeholder="В свободной форме" required></textarea>
+			</div>
 			<button class="button modal__button">Отправить</button>
 		</form>
 	</section>
+	<div class="overlay hidden"></div>
 </body>
 </html>
