@@ -51,7 +51,8 @@ h4,
 h5,
 h6,
 p,
-button {
+button,
+legend {
   margin: 0;
   padding: 0;
 }
@@ -71,6 +72,9 @@ a {
 }
 
 fieldset {
+  margin: 0;
+  padding: 0;
+
   border: none;
 }
 
@@ -104,6 +108,14 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.catalogMain {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .overlay {

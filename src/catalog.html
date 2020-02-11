@@ -43,19 +43,18 @@
                 <h2 class="visuallyHidden">Фильтр шаблонов</h2>
 				<form class="filter__form" action="https://echo.htmlacademy.ru" method="GET" name="filterForm">
 					<fieldset class="filter__manufacturers">
-						<legend class="filter__title">Стоимость:</legend>
+						<legend class="filter__title filter__title--spacy">Стоимость:</legend>
 						<div class="filter__price">
-							<div class="filter__range">
-								<div class="filter__val"></div>
-								<div class="filter__startPin"></div>
-								<div class="filter__endPin"></div>
-							</div>
+							<div class="filter__range"></div>
+							<div class="filter__val"></div>
+							<div class="filter__startPin"></div>
+							<div class="filter__endPin"></div>
 						</div>
 						<label class="filter__rangeLabel">От
 							<input type="text" name="startPrice" value="0" readonly>
 						</label>
 						<label class="filter__rangeLabel">До
-							<input type="text" name="endPrice" value="15000" readonly>
+							<input type="text" name="endPrice" value="15 000" readonly>
 						</label>
 					</fieldset>
 					<fieldset class="filter__layout">
@@ -115,26 +114,28 @@
             </section>
             <section class="catalog">
 				<h2 class="visuallyHidden">Каталог</h2>
-				<span class="catalog__sortTitle">Сортировать:</span>
-				<ul class="catalog__sortList">
-					<li class="catalog__sortItem catalog__sortItem--current">
-						<a>По цене</a>
-					</li>
-					<li class="catalog__sortItem">
-						<a>По типу</a>
-					</li>
-					<li class="catalog__sortItem">
-						<a>По названию</a>
-					</li>
-				</ul>
-				<ul class="catalog__orderList">
-					<li class="catalog__orderItem">
-						<button class="descend"></button>
-					</li>
-					<li class="catalog__orderItem">
-						<button class="ascend"></button>
-					</li>
-				</ul>
+				<div class="catalog__container">
+					<p class="catalog__sortTitle">Сортировать:</p>
+					<ul class="catalog__sortList">
+						<li class="catalog__sortItem catalog__sortItem--current">
+							<a>По цене</a>
+						</li>
+						<li class="catalog__sortItem">
+							<a>По типу</a>
+						</li>
+						<li class="catalog__sortItem">
+							<a>По названию</a>
+						</li>
+					</ul>
+					<ul class="catalog__orderList">
+						<li class="catalog__orderItem">
+							<button class="catalog__orderButton catalog__orderButton--descend catalog__orderItem--current"></button>
+						</li>
+						<li class="catalog__orderItem">
+							<button class="catalog__orderButton catalog__orderButton--ascend"></button>
+						</li>
+					</ul>
+				</div>
                 <ul class="catalog__list">
                     <li class="catalog__item">
 						<div class="catalog__indicator"></div>

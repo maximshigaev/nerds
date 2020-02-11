@@ -1,6 +1,7 @@
 .filter {
-  width: 280px;
+  flex-basis: 280px;
   min-height: 835px;
+  padding-top: 55px;
 }
 
 .filter__title {
@@ -8,21 +9,140 @@
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  letter-spacing: 0.05px;
+
+  &--spacy {
+    margin-bottom: 48px;
+
+    letter-spacing: 1px;
+  }
+}
+
+.filter__price {
+  position: relative;
+
+  width: 261px;
+  height: 80px;
+  margin-bottom: 14px;
+
+  background-color: #eeeeee;
+}
+
+.filter__val {
+  position: absolute;
+  top: 39px;
+  left: 21px;
+  z-index: 2;
+
+  width: 152px;
+  height: 2px;
+
+  background-color: #00ca74;
+}
+
+.filter__startPin,
+.filter__endPin {
+  position: absolute;
+  z-index: 3;
+
+  width: 20px;
+  height: 23px;
+
+  background-image: url('../img/filter-button.svg');
+}
+
+.filter__startPin {
+  top: 29px;
+  left: 19px;
+}
+
+.filter__endPin {
+  top: 29px;
+  left: 161px;
 }
 
 .filter__label {
+  margin-left: 35px;
+
   line-height: 20px;
   color: $subBlackColor;
 }
 
+.filter__manufacturers {
+  margin-right: -10px;
+
+  font-size: 0;
+}
+
+.filter__layoutList {
+  margin-top: 13px;
+  margin-bottom: 42px;
+}
+
+.filter__layoutItem {
+  margin-bottom: 17px;
+
+  & .filter__label {
+    position: relative;
+
+    &::before {
+      top: -5px;
+      left: 0;
+
+      width: 25px;
+      height: 25px;
+      //   background-image: url('../img/radio-on.svg');
+
+      @include pseudoElement();
+    }
+  }
+}
+
+.filter__featuresList {
+  margin-top: 13px;
+  margin-bottom: 48px;
+}
+
+.filter__featuresItem {
+  margin-bottom: 16px;
+}
+
 .filter__rangeLabel {
+  display: inline-block;
+  width: 145px;
+  margin-bottom: 55px;
+
+  font-size: 16px;
   color: $subBlackColor;
   text-transform: uppercase;
+
+  & input[type='text'] {
+    width: 80px;
+    height: 38px;
+    margin-left: 8px;
+
+    font: inherit;
+    line-height: 22;
+    text-align: center;
+
+    background-color: #eeeeee;
+    border: none;
+  }
+}
+
+.filter__range {
+  position: absolute;
+  top: 39px;
+  left: 21px;
+
+  width: 219px;
+  height: 2px;
+
+  background-color: #d7dcde;
 }
 
 .filter__button {
   width: 260px;
+  padding-top: 0;
 
   color: black;
 

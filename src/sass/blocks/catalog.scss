@@ -1,22 +1,75 @@
 .catalog {
-  width: 760px;
-  min-height: 2215px;
+  flex-basis: 760px;
+  min-height: 2218px;
+  padding-top: 50px;
+}
+
+.catalog__sortList {
+  width: 300px;
+  margin-left: 40px;
+  padding-top: 10px;
+
+  font-size: 0;
 }
 
 .catalog__sortTitle {
+  width: 360px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
 }
 
+.catalog__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog__orderList {
+  width: 60px;
+  padding-top: 10px;
+
+  font-size: 0;
+}
+
+.catalog__orderItem {
+  display: inline-block;
+  margin-left: 19px;
+}
+
+.catalog__orderButton {
+  width: 11px;
+  height: 10px;
+
+  background-color: white;
+
+  &--descend {
+    background-image: url('../img/icon-down-dir-active.svg');
+  }
+
+  &--ascend {
+    background-image: url('../img/icon-up-dir.svg');
+  }
+}
+
 .catalog__sortItem {
+  display: inline-block;
+  margin-right: 26px;
+
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
 }
 
 .catalog__item {
-  display: inline-block;
+  margin: 0 20px;
+  margin-bottom: 27px;
 
   &:hover {
     position: relative;
@@ -29,6 +82,18 @@
       background-image: url('../img/browser.svg');
     }
   }
+}
+
+.catalog__paginationList {
+  margin-top: 26px;
+
+  font-size: 0;
+}
+
+.catalog__paginationItem {
+  display: inline-block;
+
+  vertical-align: middle;
 }
 
 .catalog__indicator {
@@ -50,7 +115,8 @@
   visibility: hidden;
 }
 
-.catalog__title {
+.catalog__title,
+.catalog__sortTitle {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -82,8 +148,11 @@
   display: block;
   width: 50px;
   height: 50px;
+  margin-right: 11px;
+  padding-top: 18px;
 
   font-weight: 500;
+  font-size: 16px;
   line-height: 18px;
   text-align: center;
 
@@ -101,6 +170,8 @@
   }
 
   &--current {
+    padding-top: 15px;
+
     background-color: white;
     border: 3px solid #dbdbdb;
   }
@@ -123,4 +194,11 @@
     box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
     opacity: 0.3;
   }
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  margin-top: 48px;
 }
