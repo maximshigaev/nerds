@@ -48,6 +48,7 @@
   height: 23px;
 
   background-image: url('../img/filter-button.svg');
+  cursor: pointer;
 }
 
 .filter__startPin {
@@ -61,10 +62,56 @@
 }
 
 .filter__label {
+  position: relative;
+
   margin-left: 35px;
 
   line-height: 20px;
   color: $subBlackColor;
+
+  & input[type='radio']:checked + .filter__customRadio {
+    background-image: url('../img/radio-on.svg');
+
+    &:hover {
+      background-image: url('../img/radio-on-hover.svg');
+    }
+  }
+
+  & input[type='radio']:disabled + .filter__customRadio {
+    background-image: url('../img/radio-off-disabled.svg');
+  }
+
+  & input[type='radio']:checked:focus + .filter__customRadio {
+    background-image: url('../img/radio-on-hover.svg');
+  }
+
+  & input[type='radio']:checked:disabled + .filter__customRadio {
+    background-image: url('../img/radio-on-disabled.svg');
+  }
+
+  & input[type='checkbox']:checked + .filter__customCheckbox {
+    background-image: url('../img/checkbox-on.svg');
+
+    &:hover {
+      background-image: url('../img/checkbox-on-hover.svg');
+    }
+  }
+
+  & input[type='checkbox']:disabled + .filter__customCheckbox {
+    background-image: url('../img/checkbox-off-disabled.svg');
+  }
+
+  & input[type='checkbox']:checked:disabled + .filter__customCheckbox {
+    background-image: url('../img/checkbox-on-disabled.svg');
+  }
+
+  & input[type='checkbox']:focus + .filter__customCheckbox {
+    background-image: url('../img/checkbox-off-hover.svg');
+  }
+
+  & input[type='checkbox']:checked:focus + .filter__customCheckbox {
+    background-image: url('../img/checkbox-on-hover.svg');
+  }
 }
 
 .filter__manufacturers {
@@ -80,20 +127,36 @@
 
 .filter__layoutItem {
   margin-bottom: 17px;
+}
 
-  & .filter__label {
-    position: relative;
+.filter__customRadio {
+  position: absolute;
+  top: -3px;
+  left: -35px;
 
-    &::before {
-      top: -5px;
-      left: 0;
+  width: 25px;
+  height: 25px;
 
-      width: 25px;
-      height: 25px;
-      //   background-image: url('../img/radio-on.svg');
+  background-image: url('../img/radio-off.svg');
 
-      @include pseudoElement();
-    }
+  &:hover {
+    background-image: url('../img/radio-off-hover.svg');
+  }
+}
+
+.filter__customCheckbox {
+  position: absolute;
+  top: -0;
+  left: -35px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url('../img/checkbox-off.svg');
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-image: url('../img/checkbox-off-hover.svg');
   }
 }
 
@@ -126,6 +189,7 @@
 
     background-color: #eeeeee;
     border: none;
+    outline: none;
   }
 }
 
@@ -147,6 +211,7 @@
   color: black;
 
   background-color: #eeeeee;
+  outline: none;
 
   &:hover,
   &:focus {

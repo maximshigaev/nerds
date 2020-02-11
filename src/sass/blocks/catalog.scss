@@ -42,13 +42,54 @@
   height: 10px;
 
   background-color: white;
+  outline: none;
+  cursor: pointer;
 
   &--descend {
-    background-image: url('../img/icon-down-dir-active.svg');
+    background-image: url('../img/icon-down-dir.svg');
+
+    &.catalog__orderItem--current {
+      background-image: url('../img/icon-down-dir-active.svg');
+    }
+
+    &:hover,
+    &:focus {
+      background-image: url('../img/icon-down-dir-hover.svg');
+    }
+
+    &:active {
+      background-image: url('../img/icon-down-dir-active.svg');
+    }
   }
 
   &--ascend {
     background-image: url('../img/icon-up-dir.svg');
+
+    &.catalog__orderItem--current {
+      background-image: url('../img/icon-up-dir-active.svg');
+    }
+
+    &:hover,
+    &:focus {
+      background-image: url('../img/icon-up-dir-hover.svg');
+    }
+
+    &:active {
+      background-image: url('../img/icon-up-dir-active.svg');
+    }
+  }
+}
+
+.catalog__sortItem a {
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
   }
 }
 
@@ -60,20 +101,19 @@
   line-height: 18px;
   text-transform: uppercase;
 
-  opacity: 0.3;
-
-  &--current {
+  &--current a {
     opacity: 1;
   }
 }
 
 .catalog__item {
+  position: relative;
+
   margin: 0 20px;
   margin-bottom: 27px;
 
-  &:hover {
-    position: relative;
 
+  &:hover {
     & .catalog__info {
       visibility: visible;
     }
@@ -86,6 +126,7 @@
 
 .catalog__paginationList {
   margin-top: 26px;
+  margin-bottom: 60px;
 
   font-size: 0;
 }
@@ -105,14 +146,23 @@
 
 .catalog__info {
   position: absolute;
-  bottom: 0;
+  bottom: 7px;
   left: 0;
 
   width: 360px;
   min-height: 231px;
+  padding-top: 27px;
+  padding-right: 60px;
+  padding-left: 60px;
+
+  text-align: center;
 
   background-color: #eeeeee;
   visibility: hidden;
+}
+
+.catalog__title {
+  margin-bottom: 15px;
 }
 
 .catalog__title,
@@ -124,12 +174,16 @@
 }
 
 .catalog__content {
+  display: inline-block;
+
   line-height: 18px;
+  text-align: center;
   color: #666666;
 }
 
 .catalog__button {
   width: 200px;
+  margin-top: 27px;
 
   background-color: $redMainColor;
 
@@ -173,7 +227,7 @@
     padding-top: 15px;
 
     background-color: white;
-    border: 3px solid #dbdbdb;
+	border: 3px solid #dbdbdb;
   }
 }
 

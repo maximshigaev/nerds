@@ -3,6 +3,7 @@ const modalWindow = document.querySelector(`.modal`);
 const closeModalBtn = modalWindow.querySelector(`.modal__closeButton`);
 const overlay = document.querySelector(`.overlay`);
 const links = Array.from(document.querySelectorAll(`a`));
+const inputName = modalWindow.querySelector(`input[name="userName"]`);
 
 const closeModal = () => {
 	modalWindow.classList.add(`hidden`);
@@ -17,6 +18,7 @@ const closeModal = () => {
 const openModal = (e) => {
 	e.preventDefault();
 	modalWindow.classList.remove(`hidden`);
+	inputName.focus();
 	overlay.classList.remove(`hidden`);
 	document.body.style.overflow = `hidden`;
 
