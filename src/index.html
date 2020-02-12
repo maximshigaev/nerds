@@ -72,13 +72,13 @@
                 </ul>
                 <ul class="features__toggleList">
                     <li class="features__toggleItem features__toggleItem--current">
-                        <button class="features__toggleButton" type="button"></button>
+                        <button class="features__toggleButton" type="button" title="1-й слайд"></button>
                     </li>
                     <li class="features__toggleItem">
-                        <button class="features__toggleButton" type="button"></button>
+                        <button class="features__toggleButton" type="button" title="2-й слайд"></button>
                     </li>
                     <li class="features__toggleItem">
-                        <button class="features__toggleButton" type="button"></button>
+                        <button class="features__toggleButton" type="button" title="3-й слайд"></button>
                     </li>
                 </ul>
             </div>
@@ -138,26 +138,28 @@
 				</table>
                 <ul class="info__clientsList" id="clients">
                     <li class="info__clientsItem ">
-						<a class="info__clientsLink info__clientsLink--acad" href="" title="Html Academy">
+						<a class="info__clientsLink info__clientsLink--acad" href="#" title="Html Academy">
 							<img class="info__clientsImage" src="img/logo-1.png" alt="Html Academy" width="199"
 								height="68"
 							>
 						</a>
                     </li>
                     <li class="info__clientsItem">
-						<a class="info__clientsLink info__clientsLink--barb" href="" title="Borodinski">
+						<a class="info__clientsLink info__clientsLink--barb" href="#" title="Borodinski">
 							<img class="info__clientsImage" src="img/logo-2.png" alt="Borodinski" width="209"
 								height="90"
 							>
 						</a>
                     </li>
                     <li class="info__clientsItem">
-						<a href="https://financialmonster.github.io/Pink" class="info__clientsLink info__clientsLink--pink" title="Pink" target="_blank">
+						<a href="https://financialmonster.github.io/Pink"
+							class="info__clientsLink info__clientsLink--pink" title="Перейти на сайт" target="_blank"
+						>
 							<img class="info__clientsImage" src="img/logo-3.png" alt="Pink" width="185" height="52">
 						</a>
                     </li>
                     <li class="info__clientsItem">
-						<a class="info__clientsLink info__clientsLink--mishka" href="" title="Mishka">
+						<a class="info__clientsLink info__clientsLink--mishka" href="#" title="Mishka">
 							<img class="info__clientsImage" src="img/logo-4.png" alt="Mishka" width="173" height="84">
 						</a>
                     </li>
@@ -168,7 +170,9 @@
     <footer class="mainFooter">
         <section class="contacts mainFooter__contacts" id="contacts">
 			<h2 class="visuallyHidden">Наши контакты</h2>
-            <img class="contacts__image" src="img/new-map.png" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+			<img class="contacts__image" src="img/new-map.png"
+				alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
+			>
 			<div class="contacts__info">
 				<p class="contacts__title">NЁRDS DESIGN STUDIO</p>
 				<address>
@@ -205,7 +209,7 @@
     </footer>
 	<section class="hidden modal">
 		<h2 class="modal__title">Напишите нам</h2>
-		<button class="modal__closeButton" type="reset"></button>
+		<button class="modal__closeButton" type="reset" title="Закрыть"></button>
 		<form class="modal__form" action="https://echo.htmlacademy.ru" method="POST" name="modal">
 			<div class="modal__leftContainer">
 				<label class="modal__label" for="name">Ваше имя:</label>
@@ -222,7 +226,7 @@
 				<textarea class="modal__textArea" name="message" id="message"
 					placeholder="В свободной форме" required></textarea>
 			</div>
-			<button class="button modal__button">Отправить</button>
+			<button class="button modal__button"  title="Отправить">Отправить</button>
 		</form>
 	</section>
 	<div class="overlay hidden"></div>

@@ -63,7 +63,7 @@
 							<li class="filter__layoutItem">
 								<label class="filter__label">Адаптивная
 									<input class="visuallyHidden" type="radio" name="layout" value="adaptive"
-										checked
+
 									>
 									<span class="filter__customRadio"></span>
 								</label>
@@ -87,7 +87,7 @@
 						<ul class="filter__featuresList">
 							<li class="filter__featuresItem">
 								<label class="filter__label">Слайдер
-									<input class="visuallyHidden" type="checkbox" name="slider" checked>
+									<input class="visuallyHidden" type="checkbox" name="slider" >
 									<span class="filter__customCheckbox"></span>
 								</label>
 							</li>
@@ -99,7 +99,7 @@
 							</li>
 							<li class="filter__featuresItem">
 								<label class="filter__label">Новости
-									<input class="visuallyHidden" type="checkbox" name="news" checked>
+									<input class="visuallyHidden" type="checkbox" name="news" >
 									<span class="filter__customCheckbox"></span>
 								</label>
 							</li>
@@ -117,7 +117,7 @@
 							</li>
 						</ul>
 					</fieldset>
-					<button class="button filter__button">Показать</button>
+					<button class="button filter__button" title="Показать">Показать</button>
 				</form>
             </section>
             <section class="catalog">
@@ -125,93 +125,112 @@
 				<div class="catalog__container">
 					<p class="catalog__sortTitle">Сортировать:</p>
 					<ul class="catalog__sortList">
-						<li class="catalog__sortItem catalog__sortItem--current">
-							<a href="#">По цене</a>
+						<li class="catalog__sortItem">
+							<a class="catalog__priceButton" href="#" title="По цене">По цене</a>
 						</li>
 						<li class="catalog__sortItem">
-							<a href="#">По типу</a>
+							<a class="catalog__typeButton" href="#" title="По типу">По типу</a>
 						</li>
 						<li class="catalog__sortItem">
-							<a href="#">По названию</a>
+							<a class="catalog__titleButton" href="#" title="По названию">По названию</a>
 						</li>
 					</ul>
 					<ul class="catalog__orderList">
 						<li class="catalog__orderItem">
-							<button class="catalog__orderButton catalog__orderButton--descend catalog__orderItem--current" title="По убыванию"></button>
+							<button class="catalog__orderButton catalog__orderButton--descend" title="По убыванию">
+							</button>
 						</li>
 						<li class="catalog__orderItem">
-							<button class="catalog__orderButton catalog__orderButton--ascend" title="По возрастанию"></button>
+							<button class="catalog__orderButton catalog__orderButton--ascend" title="По возрастанию">
+							</button>
 						</li>
 					</ul>
 				</div>
                 <ul class="catalog__list">
-                    <li class="catalog__item">
+					<li class="catalog__item" data-price="12900" data-title="Sedona" data-typeorder="3"
+						data-layouttype="responsive" data-features data-gallery
+					>
 						<div class="catalog__indicator"></div>
                         <img src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
                         <div class=" catalog__info">
                             <h3 class="catalog__title">Sedona</h3>
                             <p class="catalog__content">Информационный сайт<br> для туристов</p>
-                            <a class="button catalog__button">9 900 руб.</a>
+                            <a class="button catalog__button" title="Заказать">12 900 руб.</a>
                         </div>
                     </li>
-                    <li class="catalog__item">
+					<li class="catalog__item" data-price="11900" data-title="Pink" data-typeorder="6"
+						data-layouttype="fix" data-news data-cart
+					>
 						<div class="catalog__indicator"></div>
                         <img src="img/img-pink.jpg" alt="Pink" width="360" height="576">
                         <div class="catalog__info">
                             <h3 class="catalog__title">Pink App</h3>
                             <p class="catalog__content">Продуктовый лендинг приложения для iOS и Android</p>
-                            <a href="https://financialmonster.github.io/Pink" class="button catalog__button" target="_blank">9 900 руб.</a>
+							<a href="https://financialmonster.github.io/Pink" class="button catalog__button"
+								target="_blank" title="Перейти на сайт">11 900 руб.
+							</a>
                         </div>
                     </li>
-                    <li class="catalog__item">
+					<li class="catalog__item" data-price="10900" data-title="Borodinski" data-typeorder="1"
+						data-layouttype="adaptive" data-features data-cart
+					>
 						<div class="catalog__indicator"></div>
                         <img src="img/img-barbershop.jpg" alt="Borodinski" width="360" height="576">
                         <div class="catalog__info">
                             <h3 class="catalog__title">Barbershop</h3>
                             <p class="catalog__content">Сайт салона красоты.<br> Для мужчин, да.</p>
-                            <a class="button catalog__button">9 900 руб.</a>
+                            <a class="button catalog__button" title="Заказать">10 900 руб.</a>
                         </div>
                     </li>
-                    <li class="catalog__item">
+					<li class="catalog__item" data-price="9900" data-title="Mishka" data-typeorder="2"
+						data-layouttype="fix" data-slider data-cart
+					>
 						<div class="catalog__indicator"></div>
                         <img src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
                         <div class="catalog__info">
                             <h3 class="catalog__title">Mishka</h3>
                             <p class="catalog__content">Интернет-магазин<br> вязаных игрушек</p>
-                            <a class="button catalog__button">9 900 руб.</a>
+                            <a class="button catalog__button" title="Заказать">9 900 руб.</a>
                         </div>
                     </li>
-                    <li class="catalog__item">
+					<li class="catalog__item" data-price="8900" data-title="Aplus" data-typeorder="5"
+						data-layouttype="adaptive" data-news data-gallery
+					>
 						<div class="catalog__indicator"></div>
                         <img src="img/img-aplus.jpg" alt="A Plus" width="360" height="576">
                         <div class="catalog__info">
                             <h3 class="catalog__title">A Plus</h3>
                             <p class="catalog__content">Лендинг курсов повышения квалификации</p>
-                            <a class="button catalog__button">9 900 руб.</a>
+                            <a class="button catalog__button" title="Заказать">8 900 руб.</a>
                         </div>
                     </li>
-                    <li class="catalog__item">
+					<li class="catalog__item" data-price="7900" data-title="Kvast" data-typeorder="4"
+						data-layouttype="responsive" data-slider data-gallery
+					>
 						<div class="catalog__indicator"></div>
                         <img src="img/img-kvast.jpg" alt="Kvast" width="360" height="576">
                         <div class="catalog__info">
                             <h3 class="catalog__title">Кваст</h3>
                             <p class="catalog__content">Промо-сайт производителя крафтового кваса</p>
-                            <a class="button catalog__button">9 900 руб.</a>
+                            <a class="button catalog__button" title="Заказать">7 900 руб.</a>
                         </div>
                     </li>
                 </ul>
                 <ul class="catalog__paginationList">
                     <li class="catalog__paginationItem">
-						<a href="" class="catalog__paginationLink catalog__paginationLink--current" title="Текущая страница">1</a>
+						<a href="#" class="catalog__paginationLink catalog__paginationLink--current"
+							title="Текущая страница"
+						>1
+						</a>
 					</li>
                     <li class="catalog__paginationItem">
-                        <a href="" class="catalog__paginationLink"  title="2-я страница">2</a>
+                        <a href="#" class="catalog__paginationLink"  title="2-я страница">2</a>
                     </li>
                     <li class="catalog__paginationItem">
-                        <a href="" class="catalog__paginationLink"  title="3-я страница">3</a>
+                        <a href="#" class="catalog__paginationLink"  title="3-я страница">3</a>
                     </li>
                     <li class="catalog__paginationItem">
-                        <a href="" class="button catalog__paginationButton" title="Следующая страница">Следующая</a>
+                        <a href="#" class="button catalog__paginationButton" title="Следующая страница">Следующая</a>
                     </li>
                 </ul>
             </section>
@@ -220,7 +239,9 @@
 	<footer class="mainFooter">
 		<section class="contacts mainFooter__contacts" id="contacts">
 			<h2 class="visuallyHidden">Наши контакты</h2>
-			<img class="contacts__image" src="img/new-map.png" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+			<img class="contacts__image" src="img/new-map.png"
+				alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
+			>
 			<div class="contacts__info">
 				<p class="contacts__title">NЁRDS DESIGN STUDIO</p>
 				<address>
@@ -257,7 +278,7 @@
 	</footer>
 	<section class="hidden modal">
 		<h2 class="modal__title">Напишите нам</h2>
-		<button class="modal__closeButton" type="reset"></button>
+		<button class="modal__closeButton" type="reset" title="Закрыть"></button>
 		<form class="modal__form" action="https://echo.htmlacademy.ru" method="POST" name="modal">
 			<div class="modal__leftContainer">
 				<label class="modal__label" for="name">Ваше имя:</label>
@@ -274,7 +295,7 @@
 				<textarea class="modal__textArea" name="message" id="message"
 					placeholder="В свободной форме" required></textarea>
 			</div>
-			<button class="button modal__button">Отправить</button>
+			<button class="button modal__button" title="Отправить">Отправить</button>
 		</form>
 	</section>
 	<div class="overlay hidden"></div>

@@ -146,7 +146,7 @@
 
 .filter__customCheckbox {
   position: absolute;
-  top: -0;
+  top: -2px;
   left: -35px;
 
   width: 27px;
@@ -206,12 +206,14 @@
 
 .filter__button {
   width: 260px;
+  margin-bottom: 60px;
   padding-top: 0;
 
   color: black;
 
   background-color: #eeeeee;
   outline: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
