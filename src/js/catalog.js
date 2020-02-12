@@ -8,8 +8,8 @@ const ascendButton = document.querySelector(`.catalog__orderButton--ascend`);
 const catalogItems = Array.from(document.querySelectorAll(`.catalog__item`));
 const catalogSortItems = Array.from(document.querySelectorAll(`.catalog__sortItem`));
 const catalogList = document.querySelector(`.catalog__list`);
-let sortOrder = `descend`;
-let sortType = `price`;
+let sortOrder = null;
+let sortType = null;
 
 export const render = (items = catalogItems) => {
 	catalogList.innerHTML = ``;
@@ -34,13 +34,13 @@ const changeSortOrder = (order, evt, btn) => {
 };
 
 ascendButton.addEventListener(`click`, function(evt) {
-	if (sortOrder === `descend`) {
+	if (sortOrder !== `ascend`) {
 		changeSortOrder(`ascend`, evt, descendButton);
 	}
 });
 
 descendButton.addEventListener(`click`, function(evt) {
-	if (sortOrder === `ascend`) {
+	if (sortOrder !== `descend`) {
 		changeSortOrder(`descend`, evt, ascendButton);
 	}
 });
@@ -50,14 +50,14 @@ const sortTypeBtnHandler = (evt, type, sortDescendFn, sortAscendFn) => {
 
 	if (sortType !== type) {
 		sortType = type;
-
 		catalogSortItems.forEach((item) => item.classList.remove(`catalog__sortItem--current`));
 		evt.target.parentElement.classList.add(`catalog__sortItem--current`);
 
 		switch (sortOrder) {
 		case `descend`:
 			if (isFiltered) {
-				catalogItems.sort(sortDescendFn);
+
+				filteredCatalogItems.sort(sortDescendFn);
 				render(filteredCatalogItems);
 			} else {
 				catalogItems.sort(sortDescendFn);
@@ -68,7 +68,8 @@ const sortTypeBtnHandler = (evt, type, sortDescendFn, sortAscendFn) => {
 
 		case `ascend`:
 			if (isFiltered) {
-				catalogItems.sort(sortAscendFn);
+
+				filteredCatalogItems.sort(sortAscendFn);
 				render(filteredCatalogItems);
 			} else {
 				catalogItems.sort(sortAscendFn);
