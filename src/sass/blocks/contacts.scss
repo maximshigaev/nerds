@@ -31,6 +31,16 @@
 
 .contacts__tel {
   color: #666666;
+
+  &:hover,
+  &:focus {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .contacts__address {

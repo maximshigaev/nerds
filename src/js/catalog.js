@@ -56,7 +56,6 @@ const sortTypeBtnHandler = (evt, type, sortDescendFn, sortAscendFn) => {
 		switch (sortOrder) {
 		case `descend`:
 			if (isFiltered) {
-
 				filteredCatalogItems.sort(sortDescendFn);
 				render(filteredCatalogItems);
 			} else {
@@ -68,11 +67,21 @@ const sortTypeBtnHandler = (evt, type, sortDescendFn, sortAscendFn) => {
 
 		case `ascend`:
 			if (isFiltered) {
-
 				filteredCatalogItems.sort(sortAscendFn);
 				render(filteredCatalogItems);
 			} else {
 				catalogItems.sort(sortAscendFn);
+				render();
+			}
+
+			break;
+
+		default:
+			if (isFiltered) {
+				filteredCatalogItems.sort(sortDescendFn);
+				render(filteredCatalogItems);
+			} else {
+				catalogItems.sort(sortDescendFn);
 				render();
 			}
 
@@ -82,22 +91,34 @@ const sortTypeBtnHandler = (evt, type, sortDescendFn, sortAscendFn) => {
 };
 
 titleButton.addEventListener(`click`, function(evt) {
-	const sortDescendFn = (a, b) => (a.dataset.title < b.dataset.title) ? 1 : -1;
-	const sortAscendFn = (a, b) => (a.dataset.title > b.dataset.title) ? 1 : -1;
+	const sortDescendFn = (a, b) => (a.dataset.title < b.dataset.title)
+		? 1
+		: -1;
+	const sortAscendFn = (a, b) => (a.dataset.title > b.dataset.title)
+		? 1
+		: -1;
 
 	sortTypeBtnHandler(evt, `title`, sortDescendFn, sortAscendFn);
 });
 
 typeButton.addEventListener(`click`, function(evt) {
-	const sortDescendFn = (a, b) => (+a.dataset.typeorder > +b.dataset.typeorder) ? 1 : -1;
-	const sortAscendFn = (a, b) => (+a.dataset.typeorder < +b.dataset.typeorder) ? 1 : -1;
+	const sortDescendFn = (a, b) => (+a.dataset.typeorder > +b.dataset.typeorder)
+		? 1
+		: -1;
+	const sortAscendFn = (a, b) => (+a.dataset.typeorder < +b.dataset.typeorder)
+		? 1
+		: -1;
 
 	sortTypeBtnHandler(evt, `type`, sortDescendFn, sortAscendFn);
 });
 
 priceButton.addEventListener(`click`, function(evt) {
-	const sortDescendFn = (a, b) => (+a.dataset.price < +b.dataset.price) ? 1 : -1;
-	const sortAscendFn = (a, b) => (+a.dataset.price > +b.dataset.price) ? 1 : -1;
+	const sortDescendFn = (a, b) => (+a.dataset.price < +b.dataset.price)
+		? 1
+		: -1;
+	const sortAscendFn = (a, b) => (+a.dataset.price > +b.dataset.price)
+		? 1
+		: -1;
 
 	sortTypeBtnHandler(evt, `price`, sortDescendFn, sortAscendFn);
 });

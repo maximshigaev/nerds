@@ -68,9 +68,11 @@ const mouseDownHandler = (downEvt) => {
 				valueLine.style.width = endPinX + halfPinWidth - filterPriceX - (valueLineLeft) + `px`;
 
 				startPriceInput.value = (MAX_PRICE * (valueLine.getBoundingClientRect().left - leftBorder)
-										/ rangeLine.clientWidth).toFixed(0);
+										/ rangeLine.clientWidth)
+					.toFixed(0);
 				endPriceInput.value = (MAX_PRICE * (valueLine.getBoundingClientRect().right - leftBorder)
-										/ rangeLine.clientWidth).toFixed(0);
+										/ rangeLine.clientWidth)
+					.toFixed(0);
 			}
 		}
 	};
